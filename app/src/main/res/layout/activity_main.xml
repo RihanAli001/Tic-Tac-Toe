@@ -12,6 +12,7 @@
         android:layout_height="430dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/board"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,7 @@
         android:id="@+id/one"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/two"
         app:layout_constraintEnd_toStartOf="@+id/two"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,105 +34,179 @@
         android:id="@+id/two"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toTopOf="@+id/five"
         app:layout_constraintEnd_toEndOf="@+id/five"
         app:layout_constraintStart_toStartOf="@+id/five"
         app:layout_constraintTop_toTopOf="@+id/board"
-        app:srcCompat="@drawable/circle" />
+        app:srcCompat="@drawable/cross" />
 
     <ImageView
         android:id="@+id/three"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/two"
-        app:layout_constraintTop_toTopOf="@+id/two"
-        app:srcCompat="@drawable/circle" />
+        app:layout_constraintTop_toTopOf="@+id/two" />
 
     <ImageView
         android:id="@+id/four"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/five"
         app:layout_constraintEnd_toStartOf="@+id/five"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/five"
-        app:srcCompat="@drawable/circle" />
+        app:layout_constraintTop_toTopOf="@+id/five" />
 
     <ImageView
         android:id="@+id/five"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/board"
         app:layout_constraintEnd_toEndOf="@+id/board"
         app:layout_constraintStart_toStartOf="@+id/board"
-        app:layout_constraintTop_toTopOf="@+id/board"
-        app:srcCompat="@drawable/circle" />
+        app:layout_constraintTop_toTopOf="@+id/board" />
 
     <ImageView
         android:id="@+id/six"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/five"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/five"
-        app:layout_constraintTop_toTopOf="@+id/five"
-        app:srcCompat="@drawable/circle" />
+        app:layout_constraintTop_toTopOf="@+id/five" />
 
     <ImageView
         android:id="@+id/seven"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/eight"
         app:layout_constraintEnd_toStartOf="@+id/eight"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/eight"
-        app:srcCompat="@drawable/circle" />
+        app:layout_constraintTop_toTopOf="@+id/eight" />
 
     <ImageView
         android:id="@+id/eight"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/board"
         app:layout_constraintEnd_toEndOf="@+id/five"
         app:layout_constraintStart_toStartOf="@+id/five"
-        app:layout_constraintTop_toBottomOf="@+id/five"
-        app:srcCompat="@drawable/circle" />
+        app:layout_constraintTop_toBottomOf="@+id/five" />
 
     <ImageView
         android:id="@+id/nine"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:visibility="invisible"
+        android:contentDescription="@string/position"
         app:layout_constraintBottom_toBottomOf="@+id/eight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/eight"
-        app:layout_constraintTop_toTopOf="@+id/eight"
-        app:srcCompat="@drawable/circle" />
+        app:layout_constraintTop_toTopOf="@+id/eight" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/cardView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="@+id/cardView3">
+
+        <ImageView
+            android:id="@+id/draw_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/draw_text"
+            app:srcCompat="@drawable/circle"
+            app:tint="@color/board" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/player2icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/cross" />
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+        app:layout_constraintEnd_toStartOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView3">
+
+        <ImageView
+            android:id="@+id/player1icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/circle" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/player1_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/win_text"
+        android:textColor="@color/circle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        tools:text="0 Win" />
+
+    <TextView
+        android:id="@+id/player2_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/win_text"
+        android:textColor="@color/cross"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        tools:text="0 Win" />
+
+    <TextView
+        android:id="@+id/draw_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/draw_text"
+        android:textColor="@color/board"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:text="0 Draw" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,45 +7,45 @@
       android:pathData="M180,0V180H0"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:pathData="M0,180H180V360H0"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:pathData="M0,360H180V540"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:pathData="M360,0V180H540"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:pathData="M540,180H360V360H540"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:pathData="M540,360H360V540"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:pathData="M360,540V360H180V540"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:pathData="M180,0V180H360V0"
       android:strokeWidth="4"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
   <path
       android:strokeWidth="1"
       android:pathData="M180.5,180.5h179v179h-179z"
       android:fillColor="#00000000"
-      android:strokeColor="#000000"/>
+      android:strokeColor="@color/board"/>
 </vector>
