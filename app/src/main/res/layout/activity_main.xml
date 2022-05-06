@@ -134,6 +134,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardView3"
@@ -154,6 +155,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -171,6 +173,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView3"
         app:layout_constraintEnd_toStartOf="@+id/cardView3"
         app:layout_constraintStart_toStartOf="parent"
@@ -244,10 +247,11 @@
             android:id="@+id/current_player"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:padding="5dp"
             android:text="@string/player_turn"
             android:textAllCaps="true"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Player1 turn" />
     </androidx.cardview.widget.CardView>

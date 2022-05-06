@@ -61,9 +61,8 @@ class MainActivity : AppCompatActivity() {
     private fun onClick(v: Int) {
         if (process == 1) {
             return
-        }else {
-            process = 1
         }
+        process = 1
         println(game.getCurrentPlayer())
         val change = game.makeTurn(game.getCurrentPlayer(), v)
 
