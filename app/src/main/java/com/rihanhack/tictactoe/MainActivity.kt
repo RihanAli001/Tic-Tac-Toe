@@ -10,6 +10,7 @@ import com.rihanhack.tictactoe.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var game: Game
+    private var process = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +59,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClick(v: Int) {
+        if (process == 1) {
+            return
+        }else {
+            process = 1
+        }
         println(game.getCurrentPlayer())
         val change = game.makeTurn(game.getCurrentPlayer(), v)
 
@@ -119,5 +125,7 @@ class MainActivity : AppCompatActivity() {
             binding.currentPlayer.text =
                 resources.getString(R.string.player_turn, game.getCurrentPlayer())
         }
+
+        process = 0
     }
 }
