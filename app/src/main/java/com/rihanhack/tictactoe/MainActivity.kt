@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
             val builder = AlertDialog.Builder(this)
                 .setTitle("Winner : ${game.getCurrentPlayer()}")
-                .setMessage("Score 1: ${game.getPlayer1Score()} and Score 2 : ${game.getPlayer2Score()}")
+                .setMessage("${game.getPlayer1Score()} : ${game.getPlayer1()} Player 1 score\n${game.getPlayer2Score()} : ${game.getPlayer2()} Player 2 score")
                 .setPositiveButton("Play More") { _, _ -> reset() }
                 .setNegativeButton("No") { _, _ ->
                     Snackbar.make(
