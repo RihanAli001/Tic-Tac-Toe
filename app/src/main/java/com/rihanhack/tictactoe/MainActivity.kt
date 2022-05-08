@@ -10,7 +10,6 @@ import com.rihanhack.tictactoe.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var game: Game
-    private var process = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         if ((1..2).random() == 1) game.setTurn(1) else game.setTurn(2)
         binding.currentPlayer.text =
             resources.getString(R.string.player_turn, game.getCurrentPlayer())
+        binding.playerSymbol.setImageResource(if (game.getTurn() == 1) R.drawable.circle else R.drawable.cross)
     }
 
     private fun reset() {
@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                 binding.player2Score.text =
                     resources.getString(R.string.win_text, game.getPlayer2Score())
             }
-        }else if (game.isDraw()){
+        } else if (game.isDraw()) {
             game.increaseDrawScore(1)
             binding.drawScore.text = resources.getString(R.string.draw_text, game.getDrawScore())
             Snackbar.make(binding.root, "Game draw", BaseTransientBottomBar.LENGTH_SHORT).show()
@@ -119,6 +119,7 @@ class MainActivity : AppCompatActivity() {
             game.nextTurn()
             binding.currentPlayer.text =
                 resources.getString(R.string.player_turn, game.getCurrentPlayer())
+            binding.playerSymbol.setImageResource(if (game.getTurn() == 1) R.drawable.circle else R.drawable.cross)
         }
     }
 }
