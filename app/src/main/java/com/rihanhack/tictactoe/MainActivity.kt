@@ -59,10 +59,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClick(v: Int) {
-        if (process == 1) {
-            return
-        }
-        process = 1
         println(game.getCurrentPlayer())
         val change = game.makeTurn(game.getCurrentPlayer(), v)
 
@@ -124,7 +120,5 @@ class MainActivity : AppCompatActivity() {
             binding.currentPlayer.text =
                 resources.getString(R.string.player_turn, game.getCurrentPlayer())
         }
-
-        process = 0
     }
 }
