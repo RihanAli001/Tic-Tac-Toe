@@ -10,6 +10,7 @@ import com.rihanhack.tictactoe.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var game: Game
+    private var process = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,11 +60,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClick(v: Int) {
+        if (!process) {
+            process = true
+        }else {
+            return
+        }
+
         println(game.getCurrentPlayer())
         val change = game.makeTurn(game.getCurrentPlayer(), v)
 
         println("Change: $change")
         if (!change) {
+            process = false
             return
         }
 
@@ -121,5 +129,7 @@ class MainActivity : AppCompatActivity() {
                 resources.getString(R.string.player_turn, game.getCurrentPlayer())
             binding.playerSymbol.setImageResource(if (game.getTurn() == 1) R.drawable.circle else R.drawable.cross)
         }
+
+        process = false
     }
 }
